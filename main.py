@@ -59,6 +59,65 @@ class Application(QMainWindow):
         self.division_button.setGeometry(330, 400, 70, 100)
         self.symbols(self.division_button)
 
+        self.result = QPushButton("=", self)
+        self.result.clicked.connect(self.answer)
+        self.result.setGeometry(165, 400, 165, 100)
+        self.result.setStyleSheet("""
+            background-color: crimson;
+            border: 1px solid black;
+        """)
+
+        # numbers
+        self.one = QPushButton("1", self)
+        self.one.clicked.connect(self.action1)
+        self.one.setGeometry(0, 100, 110, 100)
+        self.numbers(self.one)
+
+        self.two = QPushButton("2", self)
+        self.two.clicked.connect(self.action2)
+        self.two.setGeometry(110, 100, 110, 100)
+        self.numbers(self.two)
+
+        self.three = QPushButton("3", self)
+        self.three.clicked.connect(self.action3)
+        self.three.setGeometry(220, 100, 110, 100)
+        self.numbers(self.three)
+
+        self.four = QPushButton("4", self)
+        self.four.clicked.connect(self.action4)
+        self.four.setGeometry(0, 200, 110, 100)
+        self.numbers(self.four)
+
+        self.five = QPushButton("5", self)
+        self.five.clicked.connect(self.action5)
+        self.five.setGeometry(110, 200, 110, 100)
+        self.numbers(self.five)
+
+        self.six = QPushButton("6", self)
+        self.six.clicked.connect(self.action6)
+        self.six.setGeometry(220, 200, 110, 100)
+        self.numbers(self.six)
+
+        self.seven = QPushButton("7", self)
+        self.seven.clicked.connect(self.action7)
+        self.seven.setGeometry(0, 300, 110, 100)
+        self.numbers(self.seven)
+
+        self.eight = QPushButton("8", self)
+        self.eight.clicked.connect(self.action8)
+        self.eight.setGeometry(110, 300, 110, 100)
+        self.numbers(self.eight)
+
+        self.nine = QPushButton("9", self)
+        self.nine.clicked.connect(self.action9)
+        self.nine.setGeometry(220, 300, 110, 100)
+        self.numbers(self.nine)
+
+        self.zero = QPushButton("0", self)
+        self.zero.clicked.connect(self.action0)
+        self.zero.setGeometry(0, 400, 165, 100)
+        self.numbers(self.zero)
+
     # Methods
     def on_off(self):
         if self.main_button.text() == "ON":
@@ -79,6 +138,13 @@ class Application(QMainWindow):
             border: 1px solid black;
         """)
 
+    @staticmethod
+    def numbers(number):
+        number.setStyleSheet("""
+            background-color: orange;
+            border: 1px solid black;
+        """)
+
     def add(self):
         pass
 
@@ -89,6 +155,39 @@ class Application(QMainWindow):
         pass
 
     def division(self):
+        pass
+
+    def answer(self):
+        pass
+
+    def action1(self):
+        pass
+
+    def action2(self):
+        pass
+
+    def action3(self):
+        pass
+
+    def action4(self):
+        pass
+
+    def action5(self):
+        pass
+
+    def action6(self):
+        pass
+
+    def action7(self):
+        pass
+
+    def action8(self):
+        pass
+
+    def action9(self):
+        pass
+
+    def action0(self):
         pass
 
 
